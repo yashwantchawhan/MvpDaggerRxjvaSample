@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/padding_list_row"
+    android:paddingLeft="?listPreferredItemPaddingLeft"
+    android:paddingRight="?listPreferredItemPaddingRight"
+    android:paddingTop="@dimen/padding_list_row">
+
+
+    <TextView
+        android:id="@+id/tvDateCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="0dp"
+        android:text="12.00"
+        android:textColor="@color/author"
+        android:textAppearance="?android:title"
+        android:textSize="10sp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tvNewsTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDateCreated"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:title"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNewsTittle"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/author"
+        android:ellipsize="end"
+        android:textAppearance="?android:title"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>
+
+
+
