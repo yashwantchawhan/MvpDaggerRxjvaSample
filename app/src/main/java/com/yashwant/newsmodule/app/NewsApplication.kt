@@ -4,7 +4,6 @@ import android.app.Application
 
 import com.yashwant.newsmodule.dagger.AppComponent
 import com.yashwant.newsmodule.dagger.AppModule
-import com.yashwant.newsmodule.dagger.DaggerAppComponent
 
 
 /**

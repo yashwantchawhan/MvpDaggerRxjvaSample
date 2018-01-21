@@ -50,7 +50,7 @@ class NetworkModule {
     }
 
     companion object {
-        private val NAME_BASE_URL = "NAME_BASE_URL"
+        private const val NAME_BASE_URL = "NAME_BASE_URL"
     }
 }
 

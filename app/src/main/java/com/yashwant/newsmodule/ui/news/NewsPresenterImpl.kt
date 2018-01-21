@@ -6,6 +6,7 @@ import android.content.Context
 import com.yashwant.newsmodule.app.NewsApplication
 import com.yashwant.newsmodule.app.Utility
 import com.yashwant.newsmodule.model.HNews
+import com.yashwant.newsmodule.model.Hit
 import com.yashwant.newsmodule.network.NewsApi
 
 import javax.inject.Inject
@@ -39,8 +40,8 @@ class NewsPresenterImpl(context: Context) : NewsPresenter {
 
             newsApi!!.getNews(query)
                     .subscribeOn(Schedulers.io())
-                    .map<List<Hit>>(Function<HNews, List<Hit>> { it.getHits() })
-                    .flatMapIterable<Hit> { hits -> hits }
+                    .map { hNews -> hNews.hits }
+                    .flatMapIterable { hits -> hits }
                     .filter { hit -> hit.title != null }
                     .toList()
                     .observeOn(AndroidSchedulers.mainThread())
